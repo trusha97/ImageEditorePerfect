@@ -85,9 +85,9 @@
 
 
 import { useEffect } from "react";
-import closeIcon from "../../assets/closeIcon.svg";
 import { cn } from "../../utils/utils";
 import Image from "next/image";
+import { closeIcon } from "utils/image";
 
 const ModalComponent = ({
   isOpen,
