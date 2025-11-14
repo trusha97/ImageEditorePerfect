@@ -19,17 +19,17 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Header from "@/Typography/header/Header";
-import Paragraph from "@/Typography/text/Paragraph";
 import Image from "next/image";
-import { Ai1, Ai2, Ai3, note, obremover, sound, textspech, textspechimage } from "@/utils/image";
+import { note, sound, textspech, textspechimage } from "utils/image";
+import Header from "Typography/header/Header";
+import Paragraph from "Typography/text/Paragraph";
 
 const GenerativeAi = () => {
     const [isHovered, setIsHovered] = useState(false);
     return (
 
         <>
-            <div className="relative  xl:!h-[600px] sm:h-[750px] h-[600px] 2xl:ml-12 ml-0 2xl:mr-12.5 mr-0 !mb-12">
+            <div className=" relative  xl:!h-[600px] sm:h-[750px] h-[600px] 2xl:ml-12 ml-0 2xl:mr-12.5 mr-0 !mb-12">
                 {/* Background Image */}
                 <Image
                     src={textspech}
