@@ -36,8 +36,7 @@ import problem from "../Assets/images/problem.png";
 import Backgroundmodal from "../Assets/images/Backgroundmodal.png";
 import Unblurmodal from "../Assets/images/Unblurmodal.png";
 import ProcessingAnimation from "../Assets/images/ProcessingAnimation.png";
-
-
+import closeIcon from "../Assets/images/closeIcon.svg";
 
 
 
@@ -80,4 +79,5 @@ export {problem}
 export {Backgroundmodal}
 export {Unblurmodal}
 export {ProcessingAnimation}
+export {closeIcon}
 
