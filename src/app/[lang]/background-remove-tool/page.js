@@ -22,7 +22,7 @@ export default function BackgroundRemove() {
       <Empower/>
       <Creativehorizons/>
       <EditingTools/>
-      {/* <Faq/> */}
+      <Faq/>
 
 
     </>
