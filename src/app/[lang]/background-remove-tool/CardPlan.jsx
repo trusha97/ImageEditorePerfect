@@ -1,6 +1,7 @@
-// import { plancardstar } from "@/utils/image";
+"use client";
 import Image from "next/image";
 import React from "react";
+import { plancardstar } from "utils/image";
 
 const CardPlan = () => {
   return (
@@ -27,7 +28,7 @@ const CardPlan = () => {
               >
                 <span className="bg-[var(--litepurpeltwo)] p-1.5 rounded-[6px] h-10 w-10 flex items-center justify-center bgstar">
                   <Image
-                    // src={plancardstar}
+                    src={plancardstar}
                     alt="plancardstar"
                     height={26.67}
                     width={26.67}

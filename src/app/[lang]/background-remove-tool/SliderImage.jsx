@@ -1,6 +1,6 @@
-import { slider1, slider2, slider3, slider4, slider5 } from "@/utils/image";
 import Image from "next/image";
 import React from "react";
+import { slider1, slider2, slider3, slider4, slider5 } from "utils/image";
 
 const SliderImage = () => {
   return (

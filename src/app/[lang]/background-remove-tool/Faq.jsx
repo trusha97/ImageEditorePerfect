@@ -49,7 +49,7 @@ const Faq = () => {
   };
 
   return (
-    <section className="bg-white px-4 py-10 md:py-20">
+    <section className="bg-white px-4 ">
       <div className="max-w-[1505px] mx-auto flex flex-col xl:flex-row w-full justify-between items-center gap-8 xl:gap-0 mb-[50px] xl:mb-[100px]">
         {/* Left Content */}
         <div className="xl:w-2/5 w-full flex flex-col justify-center items-center xl:items-start text-center xl:text-left">

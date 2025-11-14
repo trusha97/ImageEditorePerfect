@@ -5,6 +5,11 @@ import Faq from "./Faq";
 import Empower from "./Empower";
 import Creativehorizons from "./CreativeHorizons";
 import EditingTools from "./EditingTools";
+import ImageGenerator from "./ImageGenerator";
+import ObjectRemover from "./ObjectRemover";
+import CardPlan from "./CardPlan";
+import GenerativeAi from "./GenerativeAi";
+import SliderImage from "./SliderImage";
 export default function BackgroundRemove() {
   const { t } = useTranslation();
 
@@ -22,7 +27,13 @@ export default function BackgroundRemove() {
       <Empower/>
       <Creativehorizons/>
       <EditingTools/>
+      <ImageGenerator/>
+      <ObjectRemover/>
+      <GenerativeAi/>
       <Faq/>
+      <CardPlan/>
+      <SliderImage/>
+
 
 
     </>
