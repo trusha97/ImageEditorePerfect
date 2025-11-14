@@ -1,0 +1,1 @@
+Next.js + Tailwind full project with .gitignore
