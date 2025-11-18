@@ -37,7 +37,21 @@ import Backgroundmodal from "../Assets/images/Backgroundmodal.png";
 import Unblurmodal from "../Assets/images/Unblurmodal.png";
 import ProcessingAnimation from "../Assets/images/ProcessingAnimation.png";
 import closeIcon from "../Assets/images/closeIcon.svg";
-
+import Instant from "../Assets/images/Instant.png";
+import HighQuality from "../Assets/images/HighQuality.png";
+import EasyBackground from "../Assets/images/EasyBackground.png";
+import InstantlyRemove from "../Assets/images/InstantlyRemove.png";
+import Remove1 from "../Assets/images/Remove1.png";
+import Remove2 from "../Assets/images/Remove2.png";
+import Remove3 from "../Assets/images/Remove3.png";
+import Remove4 from "../Assets/images/Remove4.png";
+import bgremoveimage from "../Assets/images/bgremoveimage.png";
+import faqsectionbg from "../Assets/images/faqsectionbg.png";
+import Imageedites1 from "../Assets/images/Imageedites1.png";
+import Imageedites2 from "../Assets/images/Imageedites2.png";
+import Imageedites3 from "../Assets/images/Imageedites3.png";
+import Qualityimg1 from "../Assets/images/Qualityimg1.png";
+import Qualityimg2 from "../Assets/images/Qualityimg2.png";
 
 
 
@@ -80,4 +94,21 @@ export {Backgroundmodal}
 export {Unblurmodal}
 export {ProcessingAnimation}
 export {closeIcon}
+export {Instant}
+export {HighQuality}
+export {EasyBackground}
+export {InstantlyRemove}
+export {Remove1}
+export {Remove2}
+export {Remove3}
+export {Remove4}
+export {bgremoveimage}
+export {faqsectionbg}
+export {Imageedites1}
+export {Imageedites2}
+export {Imageedites3}
+export {Qualityimg1}
+export {Qualityimg2}
+
+
 

@@ -465,7 +465,9 @@ h6 {
   width: 136px;
   height: 91px;
 }
-
+.testimonials-bg {
+  background: linear-gradient(90deg, #F9FBFF -1.3%, #FFF3F0 49.35%, #F9FBFF 100%);
+}
 @media (max-width: 640px) {
   .titlelogo {
     width: 75px;
