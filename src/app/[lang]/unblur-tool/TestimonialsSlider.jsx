@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -47,17 +47,33 @@ const NextArrow = ({ onClick }) => (
 
 const TestimonialsSlider = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const totalSlides = testimonials.length;
+    // FIX: Detect screen width BEFORE slick renders
+      const [initialSlides, setInitialSlides] = useState(3);
 
+      useEffect(() => {
+          const width = window.innerWidth;
+      
+          if (width <= 480) setInitialSlides(1);
+          else if (width <= 640) setInitialSlides(1);
+          else if (width <= 768) setInitialSlides(2);
+          else if (width <= 1024) setInitialSlides(2);
+          else if (width <= 1280) setInitialSlides(2);
+          else setInitialSlides(3);
+        }, []);
+
+
+    const totalSlides = testimonials.length;
     const progressWidth = ((activeIndex + 1) / totalSlides) * 100;
 
     const settings = {
         dots: false,
         infinite: true,
         speed: 600,
-        slidesToShow: 2,
+        slidesToShow: initialSlides,   // FIXED
+        // slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
+        mobileFirst: false,
         autoplaySpeed: 3000,
         beforeChange: (_, next) => setActiveIndex(next),
 
@@ -65,10 +81,18 @@ const TestimonialsSlider = () => {
         prevArrow: <PrevArrow />,
         nextArrow: <NextArrow />,
 
+        // responsive: [
+        //     { breakpoint: 1024, settings: { slidesToShow: 1, arrows: false } },
+        //     { breakpoint: 900, settings: { slidesToShow: 1, arrows: false } },
+        // ],
+
         responsive: [
-            { breakpoint: 1024, settings: { slidesToShow: 1, arrows: false } },
-            { breakpoint: 900, settings: { slidesToShow: 1, arrows: false } },
-        ],
+      { breakpoint: 1280, settings: { slidesToShow: 2 } },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 2 } },
+      { breakpoint: 640, settings: { slidesToShow: 1 } },
+      { breakpoint: 480, settings: { slidesToShow: 1 } },
+    ],
     };
 
     return (

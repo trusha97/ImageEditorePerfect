@@ -41,7 +41,7 @@ const Unblur = () => {
       <QualityandAccuracy/>
       <ImageEditer/>
       {/* <FAQSection/> */}
-      {/* <TestimonialsSlider/> */}
+      <TestimonialsSlider/>
       <ReadyToRemoveSection/>
       {/* <ThreeSteps/> */}
     </>
