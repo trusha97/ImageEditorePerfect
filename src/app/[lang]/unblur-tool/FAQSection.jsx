@@ -1,90 +1,89 @@
-"use client";
-
-import Image from "next/image";
 import React from "react";
 import { faqsectionbg } from "utils/image";
 
 const FAQSection = () => {
   return (
-    <div className="mt-[100px]  mx-auto  relative">
-      <Image src={faqsectionbg} />
+    <>
       <div
-  className="w-full flex justify-center px-4 py-16  border border-[#E8E8E8] rounded-xl max-w-[994px]  absolute top-0 left-1/2 -translate-x-1/2"
-  style={{ boxShadow: "0px 4px 8px rgba(0,0,0,0.1)" }}
->
+        className="bg-cover bg-center bg-no-repeat md:py-[100px] py-[50px] sm:px-[30px] px-[20px] "
+        style={{ backgroundImage: `url(${faqsectionbg.src})` }}
+      >
+        {/* CENTER BOX */}
+        <div
+          className="w-full max-w-[994px] mx-auto sm:px-10 px-[10px]  md:pt-10 pt-[30px] md:pb-10 pb-[30px]  border border-[#E8E8E8] rounded-xl"
+          style={{ boxShadow: "0px 4px 8px rgba(0,0,0,0.1)" }}
+        >
+          <div className="max-w-5xl w-full mx-auto">
+            {/* Title */}
+            <h2 className="md:text-[50px] text-3xl font-bold md:leading-[60px] leading-10 text-center md:mb-10 mb-5">
+              Frequently Asked{" "}
+              <span className="text-[#FF6A3D] font-bold">Questions</span>
+            </h2>
 
-        <div className="max-w-5xl w-full ">
+            {/* FAQ LIST */}
+            <div className="space-y-4">
 
-          {/* Title */}
-          <h2 className="text-4xl font-semibold text-center mb-12">
-            Frequently Asked{" "}
-            <span className="text-[#FF6A3D] font-bold">Questions</span>
-          </h2>
+              {/* CARD 1 */}
+              <div className="bg-white border border-[#E8E8E8] rounded-xl shadow-sm sm:p-[30px] p-[15px]">
+                <h3 className="sm:text-xl text-base font-bold text-[#141414] sm:leading-[30px] leading-5  mb-[10px]">
+                  What makes Image Editor the top choice for background removal?
+                </h3>
+                <p className="text-[#2A2A33] text-sm font-normal leading-relaxed">
+                  With cutting-edge AI and advanced image processing, Image Editor delivers
+                  precise and high-quality background removal. Our platform is user-friendly
+                  and supports a wide range of image formats for seamless editing.
+                </p>
+              </div>
 
-          {/* FAQ LIST */}
-          <div className="space-y-4">
+              {/* CARD 2 */}
+              <div className="bg-white border border-[#E8E8E8] rounded-xl shadow-sm sm:p-[30px] p-[15px]">
+                <h3 className="sm:text-xl text-base font-bold text-[#141414] sm:leading-[30px] leading-5  mb-[10px]">
+                  Can I remove backgrounds from images on my mobile device?
+                </h3>
+                <p className="text-[#2A2A33] text-sm font-normal leading-relaxed">
+                  Absolutely! You can remove backgrounds directly from your phone by visiting
+                  our website through your mobile browser.
+                </p>
+              </div>
 
-            {/* CARD 1 */}
-            <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                What makes Image Editor the top choice for background removal?
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                With cutting-edge AI and advanced image processing, Image Editor delivers precise
-                and high-quality background removal. Our platform is user-friendly and supports a
-                wide range of image formats for seamless editing.
-              </p>
+              {/* CARD 3 */}
+              <div className="bg-white border border-[#E8E8E8] rounded-xl shadow-sm sm:p-[30px] p-[15px]">
+                <h3 className="sm:text-xl text-base font-bold text-[#141414] sm:leading-[30px] leading-5  mb-[10px]">
+                  How do I make an image's background transparent?
+                </h3>
+                <p className="text-[#2A2A33] text-sm font-normal leading-relaxed">
+                  Simply upload your image to Image Editor, and our tool will automatically
+                  remove the background, leaving it transparent. You can then download the file.
+                </p>
+              </div>
+
+              {/* CARD 4 */}
+              <div className="bg-white border border-[#E8E8E8] rounded-xl shadow-sm sm:p-[30px] p-[15px]">
+                <h3 className="sm:text-xl text-base font-bold text-[#141414] sm:leading-[30px] leading-5  mb-[10px]">
+                  Can I replace the background of an image?
+                </h3>
+                <p className="text-[#2A2A33] text-sm font-normal leading-relaxed">
+                  Yes! After removing the background, you can add a new background or create
+                  a custom one using our AI-powered tools.
+                </p>
+              </div>
+
+              {/* CARD 5 */}
+              <div className="bg-white border border-[#E8E8E8] rounded-xl shadow-sm sm:p-[30px] p-[15px]">
+                <h3 className="sm:text-xl text-base font-bold text-[#141414] sm:leading-[30px] leading-5  mb-[10px]">
+                  Is Image Editor free to use, and what does it include?
+                </h3>
+                <p className="text-[#2A2A33] text-sm font-normal leading-relaxed">
+                  You can try the background removal tool for free. To access all features
+                  and download high-res images, start a 7-day trial subscription for $1.50.
+                </p>
+              </div>
+
             </div>
-
-            {/* CARD 2 */}
-            <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Can I remove backgrounds from images on my mobile device?
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Absolutely! You can remove backgrounds directly from your phone by visiting our
-                website through your mobile browser.
-              </p>
-            </div>
-
-            {/* CARD 3 */}
-            <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                How do I make an image's background transparent?
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Simply upload your image to Image Editor, and our tool will automatically remove
-                the background, leaving it transparent. You can then download the file with ease.
-              </p>
-            </div>
-
-            {/* CARD 4 */}
-            <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Can I replace the background of an image?
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Yes! After removing the background, you can add a new background or create a
-                custom one using our AI-powered tools.
-              </p>
-            </div>
-
-            {/* CARD 5 */}
-            <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Is Image Editor free to use, and what does it include?
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                You can try the background removal tool for free on the main page. To access all
-                features and download high-resolution images, you can opt for a 7-day trial
-                subscription for just $1.50.
-              </p>
-            </div>
-
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

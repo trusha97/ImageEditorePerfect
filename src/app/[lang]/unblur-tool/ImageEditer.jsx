@@ -129,7 +129,7 @@ const ImageEditer = () => {
   };
 
   return (
-    <div className="md:py-[100px] py-[50px] px-4 md:px-10 lg:px-20 xl:px-32">
+    <div className="md:pt-[100px] pt-[50px] px-4 md:px-10 lg:px-20 xl:px-32">
       <h2 className="text-[28px] md:text-[50px] font-bold text-center text-[#181D20] mb-3 leading-tight">
         Explore new possibilities with{" "}
         <span className="text-[#D64011]">Image-Editor</span>
