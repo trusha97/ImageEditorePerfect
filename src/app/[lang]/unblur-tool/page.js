@@ -39,7 +39,7 @@ const Unblur = () => {
       <RemoveBgSection/>
       <WhyChooseSection/>
       <QualityandAccuracy/>
-      {/* <ImageEditer/> */}
+      <ImageEditer/>
       {/* <FAQSection/> */}
       {/* <TestimonialsSlider/> */}
       <ReadyToRemoveSection/>
