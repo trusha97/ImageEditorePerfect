@@ -118,7 +118,7 @@ const RemoveBgSection = () => {
         <div
           className="xl:flex block flex-col md:flex-row items-center justify-between
           mx-[15px] xs:mx-[0]
-          shadow-sm rounded-tl-[30px] rounded-tr-[30px] 2xl:px-[130px] px-[15px] md:pt-[70px] pt-[30px] md:pb-[70px] pb-5
+          shadow-sm rounded-tl-[30px] rounded-tr-[30px] 2xl:px-[130px] px-[15px] xs:px-[20px] md:pt-[70px] pt-[30px] md:pb-[70px] pb-5
         "
           style={{
             background:
@@ -229,7 +229,7 @@ const RemoveBgSection = () => {
         <div
           className="
           max-w-[1510px] mx-auto pt-7 pb-[27px] px-[15px]
-          rounded-xl flex md:flex-row justify-center
+          2xl:rounded-xl rounded-[0] flex md:flex-row justify-center
           lg:gap-[179px] gap-[43px] xs:gap-[20px] text-center
         "
           style={{

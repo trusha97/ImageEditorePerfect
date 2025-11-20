@@ -104,7 +104,7 @@ const ReadyToRemoveSection = () => {
     };
 
     return (
-        <div className="bg-[#ffe5e0] md:my-[100px] my-[50px] md:px-20 px-[15px] py-[78px]  lg:flex block flex-col md:flex-row items-center justify-between rounded-3xl max-w-[1510px] mx-auto shadow-sm">
+        <div className="bg-[#ffe5e0] md:my-[100px] my-[50px] md:px-20 px-[15px] xs:px-[20px] py-[78px]  lg:flex block flex-col md:flex-row items-center justify-between rounded-3xl max-w-[1510px] mx-auto shadow-sm">
             {/* Left Side Text + Upload */}
             <div className="flex flex-col items-center md:items-start text-center md:text-left">
                 <h2 className="text-3xl md:text-[41px] font-bold text-[#181D20] lg:text-left text-center mx-auto md:leading-[60px] leading-10 mb-[51px]">

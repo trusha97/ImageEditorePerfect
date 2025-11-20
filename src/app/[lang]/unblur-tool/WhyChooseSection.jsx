@@ -26,7 +26,7 @@ const WhyChooseSection = () => {
   ];
 
   return (
-    <div className="md:py-[100px] py-[50px] bg-white flex flex-col items-center px-4 md:px-10 lg:px-20">
+    <div className="md:py-[100px] py-[50px] bg-white flex flex-col items-center  md:px-10 px-4 xs:px-5 lg:px-20">
       
       {/* Heading */}
       <h2 className="text-[32px] md:text-[42px] lg:text-[50px] font-bold text-[#181D20] text-center leading-tight mb-4">
@@ -43,7 +43,7 @@ const WhyChooseSection = () => {
         {features.map((item, index) => (
           <div
             key={index}
-            className="bg-[#F2EEFF] p-6 md:p-7 rounded-2xl shadow-sm hover:shadow-lg transition-all"
+            className="bg-[#F2EEFF] md:p-5 p-3 rounded-2xl shadow-sm hover:shadow-lg transition-all"
           >
             <div className="relative flex justify-center mb-6">
               <div className="flex justify-center items-center overflow-hidden rounded-xl w-full">
