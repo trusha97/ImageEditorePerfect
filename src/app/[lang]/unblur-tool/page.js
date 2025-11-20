@@ -31,7 +31,8 @@ import ImageEditer from './ImageEditer'
 import FAQSection from './FAQSection'
 import TestimonialsSlider from './TestimonialsSlider'
 import ReadyToRemoveSection from './ReadyToRemoveSection'
-import ThreeSteps from './ThreeSteps'
+// import ThreeSteps from './ThreeSteps'
+import FaqS from './FaqS'
 
 const Unblur = () => {
   return (
@@ -39,10 +40,11 @@ const Unblur = () => {
       <RemoveBgSection/>
       <WhyChooseSection/>
       <QualityandAccuracy/>
-      {/* <ImageEditer/> */}
-      {/* <FAQSection/> */}
-      {/* <TestimonialsSlider/> */}
+      <ImageEditer/>
+      <FAQSection/>
+      <TestimonialsSlider/>
       <ReadyToRemoveSection/>
+      
       {/* <ThreeSteps/> */}
     </>
   )

@@ -96,7 +96,7 @@ const TestimonialsSlider = () => {
     };
 
     return (
-        <div className="md:py-20 py-10 testimonials-bg md:my-[100px] my-[50px]">
+        <div className="md:py-20 py-10 testimonials-bg ">
             <h2 className="text-[30px] md:text-[50px] font-bold text-center text-[#181D20] mb-10">
                 What Our <span className="text-[#D64011]">Happy Users</span> Say?
             </h2>
