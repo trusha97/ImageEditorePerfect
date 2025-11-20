@@ -129,7 +129,7 @@ const ImageEditer = () => {
   };
 
   return (
-    <div className="py-16 px-4 md:px-10 lg:px-20 xl:px-32">
+    <div className="md:py-[100px] py-[50px] px-4 md:px-10 lg:px-20 xl:px-32">
       <h2 className="text-[28px] md:text-[50px] font-bold text-center text-[#181D20] mb-3 leading-tight">
         Explore new possibilities with{" "}
         <span className="text-[#D64011]">Image-Editor</span>
@@ -150,7 +150,7 @@ const ImageEditer = () => {
         </Slider>
       </div>
 
-      <div className="flex justify-center mt-6 mb-10">
+      <div className="flex justify-center mt-6">
         <div className="w-[180px] h-2 bg-gray-200 rounded-full overflow-hidden">
           <div
             className="h-full bg-[#8b5cf6] rounded-full transition-all duration-500"

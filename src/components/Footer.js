@@ -8,7 +8,7 @@ import Paragraph from "../Typography/text/Paragraph";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#1F2B3E] text-white sm:rounded-[32px] rounded-none mt-[6.25rem] sm:mr-[3.125rem] mr-0 mb-[3.125rem] sm:ml-[3.125rem] ml-0">
+        <footer className="bg-[#1F2B3E] text-white sm:rounded-[32px] rounded-none  sm:mr-[3.125rem] mr-0 mb-[3.125rem] sm:ml-[3.125rem] ml-0">
             <div className="max-w-[1202px] mx-auto md:pt-[3.125rem] pt-[1.875rem] sm:pb-[3.125rem] pb-6 px-4">
                 <div className="flex items-start lg:pr-[16.5rem] pr-[11.5rem]">
                     <Image
