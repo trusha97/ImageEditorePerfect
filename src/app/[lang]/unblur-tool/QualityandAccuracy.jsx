@@ -98,7 +98,7 @@ const QualityandAccuracy = () => {
             style={{
                 background: "linear-gradient(180deg, rgba(220, 234, 255, 0.5) 0%, rgba(255, 203, 223, 0.2) 49.5%, rgba(220, 234, 255, 0) 100%)"
             }}>
-            <div className="md:pt-20 pt-10 md:px-0 px-[15px]">
+            <div className="md:pt-20 pt-10 md:px-0 px-[25px]">
 
                 <h2 className=" lg:text-[50px] md:text-[35px] text-[30px] font-bold text-center text-[#2A2A33] sm:mb-3 mb-2 leading-tight">
                     Remove Background With High{" "}
