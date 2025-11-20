@@ -113,21 +113,24 @@ const ImageEditer = () => {
   const progressWidth = ((activeIndex + 1) / totalSlides) * 100;
 
   const settings = {
-    dots: false,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    arrows: true,
-    beforeChange: (_, next) => setActiveIndex(next),
-    responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 2 } },
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 2 } },
-      { breakpoint: 480, settings: { slidesToShow: 1 } },   // phones
-    ],
-  };
+  dots: false,
+  infinite: true,
+  speed: 600,
+  slidesToShow: 3,           // mobile default
+  slidesToScroll: 1,
+  autoplay: true,
+  arrows: true,
+  mobileFirst: true,
+  beforeChange: (_, next) => setActiveIndex(next),
+
+  responsive: [
+    { breakpoint: 480, settings: { slidesToShow: 1 } },   // <=480px
+    { breakpoint: 768, settings: { slidesToShow: 1 } },   // <=768px
+    { breakpoint: 1024, settings: { slidesToShow: 2 } },  // <=1024px
+    { breakpoint: 1280, settings: { slidesToShow: 2 } },  // <=1280px
+  ],
+};
+
 
   return (
     <div className="py-16 px-4 md:px-10 lg:px-20 xl:px-32">
