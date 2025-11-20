@@ -90,7 +90,8 @@ const ImageEditer = () => {
     const width = window.innerWidth;
 
     if (width <= 480) setInitialSlides(1);
-    else if (width <= 768) setInitialSlides(1);
+    else if (width <= 640) setInitialSlides(1);
+    else if (width <= 768) setInitialSlides(2);
     else if (width <= 1024) setInitialSlides(2);
     else if (width <= 1280) setInitialSlides(2);
     else setInitialSlides(3);
@@ -121,7 +122,8 @@ const ImageEditer = () => {
     responsive: [
       { breakpoint: 1280, settings: { slidesToShow: 2 } },
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 1 } },
+      { breakpoint: 768, settings: { slidesToShow: 2 } },
+      { breakpoint: 640, settings: { slidesToShow: 1 } },
       { breakpoint: 480, settings: { slidesToShow: 1 } },
     ],
   };
