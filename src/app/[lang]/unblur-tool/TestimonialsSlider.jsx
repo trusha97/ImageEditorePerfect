@@ -58,7 +58,7 @@ const TestimonialsSlider = () => {
           else if (width <= 768) setInitialSlides(2);
           else if (width <= 1024) setInitialSlides(2);
           else if (width <= 1280) setInitialSlides(2);
-          else setInitialSlides(3);
+          else setInitialSlides(2);
         }, []);
 
 
@@ -96,7 +96,7 @@ const TestimonialsSlider = () => {
     };
 
     return (
-        <div className="py-16 testimonials-bg">
+        <div className="md:py-20 py-10 testimonials-bg md:my-[100px] my-[50px]">
             <h2 className="text-[30px] md:text-[50px] font-bold text-center text-[#181D20] mb-10">
                 What Our <span className="text-[#D64011]">Happy Users</span> Say?
             </h2>
@@ -130,7 +130,7 @@ const TestimonialsSlider = () => {
             </div>
 
             {/* Purple progress bar */}
-            <div className="flex justify-center mb-10">
+            <div className="flex justify-center ">
                 <div className="w-[180px] h-2 bg-gray-200 rounded-full overflow-hidden">
                     <div
                         className="h-full bg-[#8b5cf6] rounded-full transition-all duration-500"

@@ -94,7 +94,7 @@ const BeforeAfter = ({ before, after }) => {
 // ------------------------------------------------------
 const QualityandAccuracy = () => {
     return (
-        <div className="lg:mx-[50px] mx-0 my-[100px]  rounded-[30px]"
+        <div className="lg:mx-[50px] mx-0 rounded-[30px]"
             style={{
                 background: "linear-gradient(180deg, rgba(220, 234, 255, 0.5) 0%, rgba(255, 203, 223, 0.2) 49.5%, rgba(220, 234, 255, 0) 100%)"
             }}>
