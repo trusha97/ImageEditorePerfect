@@ -52,7 +52,7 @@ import Imageedites2 from "../Assets/images/Imageedites2.png";
 import Imageedites3 from "../Assets/images/Imageedites3.png";
 import Qualityimg1 from "../Assets/images/Qualityimg1.png";
 import Qualityimg2 from "../Assets/images/Qualityimg2.png";
-
+import bgremove from "../Assets/images/removebg.png";
 
 
 export {logo};
@@ -109,6 +109,6 @@ export {Imageedites2}
 export {Imageedites3}
 export {Qualityimg1}
 export {Qualityimg2}
-
+export {bgremove}
 
 
