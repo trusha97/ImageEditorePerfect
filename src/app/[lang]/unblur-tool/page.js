@@ -32,7 +32,6 @@ import FAQSection from './FAQSection'
 import TestimonialsSlider from './TestimonialsSlider'
 import ReadyToRemoveSection from './ReadyToRemoveSection'
 // import ThreeSteps from './ThreeSteps'
-import FaqS from './FaqS'
 
 const Unblur = () => {
   return (

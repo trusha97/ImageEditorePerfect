@@ -23,10 +23,6 @@ export default function HomePage() {
       <Faq/>
       <CardPlan/>
       <SliderImage/>
-
-
-
-
     </>
   );
 }
