@@ -4,13 +4,13 @@ import { useTranslation } from 'react-i18next';
 import ReactCountryFlag from "react-country-flag";
 import { useRouter, usePathname } from 'next/navigation';
 import Cookies from 'js-cookie'; // ✅ import js-cookie
-import { logo } from '../utils/image';
 import Image from 'next/image';
 import Paragraph from "../Typography/text/Paragraph";
 import { useState, useEffect } from 'react';
 import LoginModal from './common/LoginModal';
 import LanguageModal from './common/languageModal';
 import { languages, isValidLanguage, getLanguageByCode } from '../config/languages';
+import { logo } from 'utils/image';
 
 export default function Header() {
   const { t, i18n } = useTranslation();

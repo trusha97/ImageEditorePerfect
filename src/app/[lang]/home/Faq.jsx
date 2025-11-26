@@ -54,7 +54,7 @@ const Faq = () => {
         {/* Left Content */}
         <div className="xl:w-2/5 w-full flex flex-col justify-center items-center xl:items-start text-center xl:text-left">
           <div className="flex justify-center items-center mb-4">
-            <h2 className="text-[36px] sm:text-[42px] lg:text-[50px] font-bold leading-[48px] sm:leading-[60px] lg:leading-[70px] md:max-w-[250px] max-w-full">
+            <h2 className="text-[36px] sm:text-[42px] lg:text-[50px] font-bold leading-[48px] sm:leading-[60px] lg:leading-[70px] md:max-w-[300px] max-w-full">
               Let’s Have
               <span className="text-[var(--orange)] font-bold">
                 {" "}

@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Paragraph from '../../../Typography/text/Paragraph';
-
 const Creativehorizons = () => {
   const stats = [
     { label: "Creative Edits Made Every Month", value: "1B+" },
@@ -13,7 +12,7 @@ const Creativehorizons = () => {
 
   return (
     <>
-      <div className="max-w-[1506px] mx-auto xl:pt-[100px] pt-12.5 px-4">
+      <div className="max-w-[1506px] mx-auto xl:pt-[100px] pt-[50px] px-4">
         {/* Desktop: flex row | Mobile: flex-col */}
         <div className="flex flex-col xl:flex-row gap-12 xl:gap-40 items-center">
 
@@ -47,10 +46,10 @@ const Creativehorizons = () => {
                   key={index}
                   className="rounded-xl sm:p-6 p-3  shadow-md creativebg  sm:h-[234px] xs:h-[136px] h-[120px]  flex flex-col justify-between"
                 >
-                  <p className="text-gray-700  md:text-2xl xs:text-base text-sm sm:leading-[30px] leading-[20px] font-medium max-w-[217px]">
+                  <p className="text-gray-700  md:text-2xl xs:text-base text-sm sm:leading-[30px] xs:leading-[20px] leading-3 font-medium max-w-[217px]">
                     {item.label}
                   </p>
-                  <h2 className="xs:text-[50px] sm:text-[80px] text-4xl xs:leading-[50px] sm:leading-[90px] leading-9  font-bold text-black">
+                  <h2 className="xs:text-[30px] sm:text-[80px] text-4xl xs:leading-[50px] sm:leading-[90px] leading-9  font-bold text-black">
                     {item.value}
                   </h2>
                 </div>
