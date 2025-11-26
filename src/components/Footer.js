@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <footer className="bg-[#1F2B3E] text-white sm:rounded-[32px] rounded-none  sm:mr-[3.125rem] mr-0 mb-[3.125rem] sm:ml-[3.125rem] ml-0">
             <div className="max-w-[1202px] mx-auto md:pt-[3.125rem] pt-[1.875rem] sm:pb-[3.125rem] pb-6 px-4">
-                <div className="flex items-start lg:pr-[16.5rem] pr-[11.5rem]">
+                <div className="flex items-start ">
                     <Image
                         src={logofooter}
                         alt="Logo"
@@ -30,9 +30,9 @@ const Footer = () => {
                         />
                     </div>
 
-                    <div className="w-[33.333%]  pt-0 ">
+                    <div className="md:w-[33.333%] w-full  pt-0 ">
                         <Paragraph
-                            level={2} text="Support" className="!mb-3 font-bold !text-[var(--litepurpel)]"
+                            level={2} text="Support" className="!mb-3 mt-0  font-bold !text-[var(--litepurpel)]"
                         />
                         <ul className="space-y-3  text-white ">
                             <li><a href="#">
@@ -63,9 +63,9 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="w-[33.333%] md:pt-0 pt-7.5 ">
+                    <div className="md:w-[33.333%] w-full md:pt-0 pt-7.5 ">
                         <Paragraph
-                            level={2} text="Legal" className="!mb-3 font-bold !text-[var(--litepurpel)]"
+                            level={2} text="Legal" className="!mb-3 lg:mt-0 mt-[30px] font-bold !text-[var(--litepurpel)]"
                         />
                         <ul className="space-y-3  text-white ">
                             <li><a href="#">
@@ -86,9 +86,9 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="w-[33.333%] md:pt-0 pt-7.5 ">
+                    <div className="md:w-[33.333%] w-full md:pt-0 pt-7.5 ">
                         <Paragraph
-                            level={2} text="Tools" className="!mb-3 font-bold !text-[var(--litepurpel)]"
+                            level={2} text="Tools" className="!mb-3 lg:mt-0 mt-[30px] font-bold !text-[var(--litepurpel)]"
                         />
                         <ul className="space-y-3  text-white ">
                             <li><a href="#">
