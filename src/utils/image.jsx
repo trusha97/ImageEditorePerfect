@@ -52,7 +52,12 @@ import Imageedites2 from "../Assets/images/Imageedites2.png";
 import Imageedites3 from "../Assets/images/Imageedites3.png";
 import Qualityimg1 from "../Assets/images/Qualityimg1.png";
 import Qualityimg2 from "../Assets/images/Qualityimg2.png";
-import bgremove from "../Assets/images/removebg.png";
+import bgremove from "../Assets/images/bgremove.png";
+import removebgmind from "../Assets/images/removebgmind.png"
+import downloadbgremove from "../Assets/images/downloadbgremove.png"
+import Layerbg from "../Assets/images/Layerbg.png"
+import choiseimgbg from "../Assets/images/choiseimgbg.png"
+
 
 
 export {logo};
@@ -110,5 +115,9 @@ export {Imageedites3}
 export {Qualityimg1}
 export {Qualityimg2}
 export {bgremove}
+export {removebgmind}
+export {downloadbgremove}
+export {Layerbg}
+export {choiseimgbg}
 
 
