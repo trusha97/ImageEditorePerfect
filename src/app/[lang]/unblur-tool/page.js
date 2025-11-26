@@ -24,25 +24,25 @@
 // }
 "use client"
 import React from 'react'
-import RemoveBgSection from './RemoveBgSection'
-import WhyChooseSection from './WhyChooseSection'
-import QualityandAccuracy from './QualityandAccuracy'
-import ImageEditer from './ImageEditer'
-import FAQSection from './FAQSection'
-import TestimonialsSlider from './TestimonialsSlider'
-import ReadyToRemoveSection from './ReadyToRemoveSection'
+import RemoveBgSection from '../background-remove-tool/RemoveBgSection'
+import WhyChooseSection from '../background-remove-tool/WhyChooseSection'
+import QualityandAccuracy from '../background-remove-tool/QualityandAccuracy'
+import ImageEditer from '../background-remove-tool/ImageEditer'
+import FAQSection from '../background-remove-tool/FAQSection'
+import TestimonialsSlider from '../background-remove-tool/TestimonialsSlider'
+import ReadyToRemoveSection from '../background-remove-tool/ReadyToRemoveSection'
 // import ThreeSteps from './ThreeSteps'
 
 const Unblur = () => {
   return (
     <>
-      <RemoveBgSection/>
-      <WhyChooseSection/>
-      <QualityandAccuracy/>
-      <ImageEditer/>
-      <FAQSection/>
-      <TestimonialsSlider/>
-      <ReadyToRemoveSection/>
+      {/* <RemoveBgSection/> */}
+      {/* <WhyChooseSection/> */}
+      {/* <QualityandAccuracy/> */}
+      {/* <ImageEditer/> */}
+      {/* <FAQSection/> */}
+      {/* <TestimonialsSlider/> */}
+      {/* <ReadyToRemoveSection/> */}
       
       {/* <ThreeSteps/> */}
     </>
