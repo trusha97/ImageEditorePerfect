@@ -9,12 +9,12 @@ const Empower = () => {
     return (
         <div>
             <div
-                className="bg-cover bg-center rounded-[30px] lg:mx-12.5 mx-4"
+                className="bg-cover bg-center rounded-[30px] lg:mx-12 mx-[15px]"
                 style={{ backgroundImage: `url(${empowerbg.src})` }}
             >
-                <div className="max-w-[1398px] mx-auto xl:flex block gap-5 sm:pt-22.5 pt-10 xl:pb-24 pb-10 px-4">
+                <div className="max-w-[1398px] mx-auto xl:flex block gap-5 sm:pt-20 pt-10 xl:pb-24 pb-10 px-4">
                     <div className="xl:w-[60%] w-full">
-                        <div className="lg:text-[70px] sm:text-6xl text-4xl font-normal leading-snug sm:mb-10 mb-2.5  xl:text-left sm:text-center text-left">
+                        <div className="lg:text-[70px] sm:text-6xl text-4xl font-normal leading-snug md:mb-[86px] mb-2.5  xl:text-left sm:text-center text-left">
                             <span className="text-white">
                                 Empower Your Creativity and{" "}
                             </span>
@@ -30,7 +30,7 @@ const Empower = () => {
                                 text="Boost your creativity and productivity with AI, which provides innovative tools and smart solutions to streamline your workflow. Unlock new levels of efficiency and inspiration for your projects."
                             />
                         </div>
-                        <div className="xl:hidden block">
+                        <div className="xl:hidden block mb-[30px] mt-[30px]">
                             <button
                                 type="button"
                                 className=" xl:mx-0 sm:mx-auto mx-0  mb-7.5 px-8.5 py-3.5  h-12 w-[200px] flex items-center justify-center rounded-[var(--radius)] bg-[var(--btnbg)] gap-[6px] cursor-pointer text-[var(--white)] font-bold text-base leading-5 "
@@ -91,19 +91,19 @@ const Empower = () => {
                     </div>
                 </div>
 
-                <div className=" xl:flex items-center block trusted-by py-6.5 max-[1600px]:px-10 px-48 !pt-0">
+                <div className=" xl:flex items-center block trusted-by py-6 lg:px-48 sm:px-9 px-[15px] !pt-0 ">
                     <div className="flex items-center  xl:w-[40%] w-full ">
-                        <Image className="mr-5.5 max-[1280px]:hidden block " src={weare} alt="weare" />
+                        <Image className="mr-5.5 xl:block hidden" src={weare} alt="weare" />
                         <Paragraph
                             className="text-white font-bold sm:text-[30px] text-base leading-[40px] !mb-1 !mx-auto xl:mx-0  "
                             level={4} 
                             text={"We are Trusted by"}
                         />
                     </div>
-                    <span className="block border-t border-white opacity-50 max-w-[400px] mx-auto mb-2.5"></span>
+                    <span className="block border-t border-white opacity-50 max-w-[400px] mx-auto mb-2.5 "></span>
 
                     <div className="overflow-hidden w-full ">
-                        <div className="animate-scroll sm:gap-16 gap-10">
+                        <div className="animate-scroll md:gap-16 sm:gap-10 gap-5">
                             <Image src={Amazon} alt="Amazon logo" className="titlelogo" />
                             <Image src={cocacola} alt="CocaCola logo" className="titlelogo" />
                             <Image src={Meta} alt="Meta logo" className="titlelogo" />

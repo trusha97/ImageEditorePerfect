@@ -1,15 +1,15 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import Faq from "./Faq";
-import Empower from "./Empower";
-import Creativehorizons from "./CreativeHorizons";
-import EditingTools from "./EditingTools";
-import ImageGenerator from "./ImageGenerator";
-import ObjectRemover from "./ObjectRemover";
-import CardPlan from "./CardPlan";
-import GenerativeAi from "./GenerativeAi";
-import SliderImage from "./SliderImage";
+import Faq from "../home/Faq";
+import Empower from "../home/Empower";
+import Creativehorizons from "../home/CreativeHorizons";
+import EditingTools from "../home/EditingTools";
+import ImageGenerator from "../home/ImageGenerator";
+import ObjectRemover from "../home/ObjectRemover";
+import CardPlan from "../home/CardPlan";
+import GenerativeAi from "../home/GenerativeAi";
+import SliderImage from "../home/SliderImage";
 export default function BackgroundRemove() {
   const { t } = useTranslation();
 
@@ -24,15 +24,15 @@ export default function BackgroundRemove() {
     // </div>
     <>
 
-      <Empower/>
-      <Creativehorizons/>
-      <EditingTools/>
-      <ImageGenerator/>
-      <ObjectRemover/>
-      <GenerativeAi/>
-      <Faq/>
-      <CardPlan/>
-      <SliderImage/>
+      {/* <Empower/> */}
+      {/* <Creativehorizons/> */}
+      {/* <EditingTools/> */}
+      {/* <ImageGenerator/> */}
+      {/* <ObjectRemover/> */}
+      {/* <GenerativeAi/> */}
+      {/* <Faq/> */}
+      {/* <CardPlan/> */}
+      {/* <SliderImage/> */}
 
 
 

@@ -5,7 +5,8 @@ import { plancardstar } from "utils/image";
 
 const CardPlan = () => {
   return (
-    <section className="card-plan pb-[4.75rem] 2xl:px-[158px] md:my-[6.25rem] px-5 xl:flex xl:gap-12 block md:ml-[49px] ml-0 md:mr-[51px] mr-0 rounded-3xl">
+    <section className="card-plan md:pb-[100px] pb-[50px] 2xl:px-[158px] md:mt-[6.25rem] px-5 xl:flex xl:gap-12 block md:ml-[49px] ml-0 md:mr-[51px] mr-0 rounded-3xl">
+     {/* <section className="card-plan xl:flex xl:gap-12 block rounded-3xl lg:ml-[49px] ml-[15px] lg:mr-[51px] mr-[15px] "> */}
       {/* Left Info Section */}
       <div className="w-full xl:max-w-[588px] flex items-center justify-center xl:justify-start pt-10">
         <div className="space-y-4 text-center xl:text-left">
@@ -44,9 +45,9 @@ const CardPlan = () => {
       </div>
 
       {/* Right Cards Section */}
-      <div className="lg:flex block gap-5 w-full xl:justify-end justify-center mt-[6.25rem] card-main">
+      <div className="lg:flex block gap-5 w-full xl:justify-end justify-center xl:mt-[100px] mt-[50px] card-main">
         {/* Trial Card */}
-        <div className="lg:w-[354px] gap-0 w-full bg-white shadow-lg rounded-xl sm:p-[1.875rem] p-3 relative flex flex-col lg:!h-[495px] h-full xs:h-full">
+        <div className="lg:w-[354px] gap-0 w-full bg-white shadow-lg rounded-xl p-[30px]  relative flex flex-col lg:!h-[495px] h-full xs:h-full">
           <span className="md:w-[60%] w-[70%] text-center  absolute -top-0 left-1/2 transform -translate-x-1/2 bg-black text-white text-base leading-5 font-bold py-2 px-2 rounded-b-lg">
             Best value - 33% OFF
           </span>
@@ -65,12 +66,12 @@ const CardPlan = () => {
         </div>
 
         {/* Subscription Plan Card */}
-        <div className="lg:w-[354px] w-full lg:mt-0 mt-10 bg-white shadow-lg rounded-xl sm:p-[1.875rem] p-3 flex flex-col justify-between lg:!h-[495px] h-full xs:h-full">
+        <div className="lg:w-[354px] w-full lg:mt-0 mt-10 bg-white shadow-lg rounded-xl p-[30px] flex flex-col justify-between lg:!h-[495px] h-full xs:h-full">
           {/* <div> */}
             <h3 className="text-[var(--doubelblack)] font-medium !mb-2 text-[26px] leading-[1.875rem]">Subscription Plan</h3>
             <p className="text-[var(--blacktext)] font-medium !mb-5 text-sm leading-4 card-plan3">200 Credits</p>
             <p className="text-[50px] text-[var(--doubelblack)] leading-[60px] font-black !mb-5">
-              $10.00<span className="text-[var(--doubelblack)] font-medium text-2xl leading-5">/month</span>
+              $10.00<span className="text-[var(--doubelblack)] font-medium text-2xl  leading-5 sm:block hidden">/month</span>
             </p>
 
             <div className="flex flex-col space-y-3 mb-4">

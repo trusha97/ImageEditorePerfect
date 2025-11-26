@@ -117,7 +117,7 @@ const TestimonialCard = () => {
             </div>
 
 
-            <div className="absolute top-[100px] right-[-142px] max-[1439px]:hidden min-[1440px]:block">
+            <div className="absolute top-[100px] right-[-142px] lg:block hidden">
                 <Image src={curleyaerrow} alt="curleyArrow" />
             </div>
         </div>
