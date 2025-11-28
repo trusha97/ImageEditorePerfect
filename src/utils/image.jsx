@@ -58,6 +58,8 @@ import downloadbgremove from "../Assets/images/downloadbgremove.png"
 import Layerbg from "../Assets/images/Layerbg.png"
 import choiseimgbg from "../Assets/images/choiseimgbg.png"
 import choiseimagesright from "../Assets/images/choiseimagesright.png"
+import PricingBanner from "../Assets/images/PricingBanner.png"
+
 
 
 export {logo};
@@ -120,4 +122,4 @@ export {downloadbgremove}
 export {Layerbg}
 export {choiseimgbg}
 export {choiseimagesright}
-
+export {PricingBanner}
