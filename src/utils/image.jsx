@@ -57,7 +57,7 @@ import removebgmind from "../Assets/images/removebgmind.png"
 import downloadbgremove from "../Assets/images/downloadbgremove.png"
 import Layerbg from "../Assets/images/Layerbg.png"
 import choiseimgbg from "../Assets/images/choiseimgbg.png"
-
+import choiseimagesright from "../Assets/images/choiseimagesright.png"
 
 
 export {logo};
@@ -119,5 +119,5 @@ export {removebgmind}
 export {downloadbgremove}
 export {Layerbg}
 export {choiseimgbg}
-
+export {choiseimagesright}
 

@@ -175,7 +175,7 @@ const TestimonialsSlider = () => {
         }
 
         /* Hide arrows on mobile */
-        @media (max-width: 1023px) {
+        @media (max-width: 1280px) {
           .custom-prev-arrow,
           .custom-next-arrow {
             display: none !important;
