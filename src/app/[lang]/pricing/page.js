@@ -1,14 +1,17 @@
-"use client";
-import { useTranslation } from 'react-i18next';
+"use client"
+import React from 'react'
+import FaqMain from '../pricing/FaqMain'
+import UnblurBanner from '../pricing/UnblurBanner'
+import Plan from '../pricing/Plan'
 
-export default function Pricing() {
-  const { t } = useTranslation();
+const Unblur = () => {
   return (
-    <div className=" flex items-center justify-center p-6">
-      <div className="max-w-3xl w-full bg-white p-8 rounded shadow">
-        <h2 className="text-2xl font-semibold">{t('Pricing')}</h2>
-        <p className="mt-3 text-gray-600">Pricing details go here.</p>
-      </div>
-    </div>
-  );
+    <>
+    <UnblurBanner/>
+    <Plan/>
+    <FaqMain/>
+    </>
+  )
 }
+
+export default Unblur
