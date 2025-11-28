@@ -9,6 +9,7 @@ import FAQSection from "./FAQSection";
 import TestimonialsSlider from "./TestimonialsSlider";
 import ReadyToRemoveSection from "./ReadyToRemoveSection";
 import ThreeSteps from "./ThreeSteps";
+import UploadBox from "./UploadBox";
 
 export default function BackgroundRemove() {
   const { t } = useTranslation();
@@ -20,10 +21,11 @@ export default function BackgroundRemove() {
       <WhyChooseSection />
       <QualityandAccuracy />
       <ImageEditer />
+      <ThreeSteps/>
       <FAQSection />
       <TestimonialsSlider />
       <ReadyToRemoveSection />
-      <ThreeSteps/>
+      {/* <UploadBox/> */}
 
     </>
   );
