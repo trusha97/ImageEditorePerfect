@@ -4,7 +4,10 @@ import ModalComponent from "./ModalComponent";
 import Image from "next/image";
 import { apple, facebook, google, problem } from "../../utils/image";
 
+import { useRouter } from "next/navigation";
+
 const LoginModal = ({ isOpen, onClose }) => {
+  const router = useRouter();
   if (!isOpen) return null;
 
   return (
@@ -60,7 +63,15 @@ const LoginModal = ({ isOpen, onClose }) => {
           </div>
 
           {/* Login Button */}
-          <button className="w-full bg-[var(--btnbg)] text-white py-2.5 rounded-md font-semibold hover:opacity-90 transition">
+          <button
+            onClick={() => {
+              // Redirect to the German dashboard path after successful login click
+              router.push("/de/dashboard");
+              // close modal if a handler was passed
+              onClose && onClose();
+            }}
+            className="w-full bg-[var(--btnbg)] text-white py-2.5 rounded-md font-semibold hover:opacity-90 transition"
+          >
             Log In
           </button>
 
