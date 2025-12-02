@@ -62,6 +62,9 @@ import PricingBanner from "../Assets/images/PricingBanner.png"
 import used1 from "../Assets/images/used1.png"
 import used2 from "../Assets/images/used2.png"
 import used3 from "../Assets/images/used3.png"
+import Printer from "../Assets/images/Printer.png"
+import ToolIcone1 from "../Assets/images/ToolIcone1.png"
+import ToolIcone2 from "../Assets/images/ToolIcone2.png"
 
 
 
@@ -129,3 +132,7 @@ export {PricingBanner}
 export {used1}
 export {used2}
 export {used3}
+export {Printer}
+export {ToolIcone1}
+export {ToolIcone2}
+

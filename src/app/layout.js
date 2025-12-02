@@ -11,8 +11,9 @@
 
 import TranslationProvider from "../provider/TranslationProvider";
 import "../style/globals.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import HeaderController from "../components/HeaderController";
+import FooterController from "../components/FooterController";
+// NOTE: DashboardHeader is auto-selected by HeaderController when needed.
 
 export const metadata = { title: "Generative Ai" };
 
@@ -21,9 +22,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <TranslationProvider>
-          <Header />
+          <HeaderController />
           <main>{children}</main>
-          <Footer />
+          <FooterController />
         </TranslationProvider>
       </body>
     </html>
