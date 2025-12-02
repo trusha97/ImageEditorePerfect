@@ -59,6 +59,9 @@ import Layerbg from "../Assets/images/Layerbg.png"
 import choiseimgbg from "../Assets/images/choiseimgbg.png"
 import choiseimagesright from "../Assets/images/choiseimagesright.png"
 import PricingBanner from "../Assets/images/PricingBanner.png"
+import used1 from "../Assets/images/used1.png"
+import used2 from "../Assets/images/used2.png"
+import used3 from "../Assets/images/used3.png"
 
 
 
@@ -123,3 +126,6 @@ export {Layerbg}
 export {choiseimgbg}
 export {choiseimagesright}
 export {PricingBanner}
+export {used1}
+export {used2}
+export {used3}

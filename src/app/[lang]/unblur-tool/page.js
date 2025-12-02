@@ -1,15 +1,23 @@
 "use client"
 import React from 'react'
-import FaqMain from './FaqMain'
-import UnblurBanner from './UnblurBanner'
-import Plan from './Plan'
+import UnblurBgSection from './UnblurBgSection'
+import WhyChooseUnblur from './WhyChooseUnblur'
+import ImageUnblurEditer from './ImageUnblurEditer'
+import ImageEditer from '../background-remove-tool/ImageEditer'
+import ThreeSteps from '../background-remove-tool/ThreeSteps'
+import TestimonialsSlider from '../background-remove-tool/TestimonialsSlider'
+import CanBeUsed from './CanBeUsed'
 
 const Unblur = () => {
   return (
     <>
-    <UnblurBanner/>
-    <Plan/>
-    <FaqMain/>
+    <UnblurBgSection/>
+    <WhyChooseUnblur/>
+    <ImageUnblurEditer/>
+    <ImageEditer/>
+    <ThreeSteps/>
+    <CanBeUsed/>
+    <TestimonialsSlider/>
     </>
   )
 }
