@@ -117,14 +117,14 @@ export default function Dashboard() {
     const visible = filtered.slice(start, start + pageSize);
 
     const goto = (n) => setPage(Math.max(1, Math.min(totalPages, n)));
-    const pageSizes = [5, 10, 15, 20, 25, 50];
+    const pageSizes = [5, 10, 20, 50];
 
     return (
         <div className="pb-[54px] w-full max-w-[1510px] mx-auto  mt-[22px]">
             <div className="w-full">
                 {/* top controls */}
-                <div className="px-[15px]">
-                    <div className="flex justify-between items-center ">
+                <div>
+                    <div className="flex justify-between items-center">
                         <div>
                             <h3 className="text-[32px] leading-10 font-bold">My Image</h3>
                         </div>
@@ -175,7 +175,7 @@ export default function Dashboard() {
 
                     </div>
 
-                    <div className="sm:flex hidden justify-between mt-[30px] mb-5">
+                    <div className="flex justify-between mt-[30px] mb-5">
                         <div>
                             <div className="text-xl font-bold leading-5 text-[#39394680] opacity-[50%]">Name <span className="inline-block ml-2 text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.171478 0.183114C0.281417 0.0753741 0.430445 0.0148576 0.585826 0.0148576C0.741208 0.0148576 0.890236 0.0753741 1.00017 0.183114L4.49477 3.61205L7.98937 0.183114C8.04305 0.126589 8.10779 0.0812509 8.17971 0.0498059C8.25163 0.0183609 8.32928 0.00145251 8.40801 8.95359e-05C8.48673 -0.00127344 8.56493 0.012937 8.63794 0.0418728C8.71095 0.0708086 8.77728 0.113878 8.83296 0.16851C8.88863 0.223141 8.93253 0.288217 8.96202 0.359855C8.99151 0.431493 9.00599 0.508226 9.0046 0.585475C9.00321 0.662724 8.98598 0.738908 8.95393 0.809481C8.92188 0.880053 8.87568 0.943569 8.81807 0.99624L4.90912 4.83174C4.79918 4.93948 4.65016 5 4.49477 5C4.33939 5 4.19037 4.93948 4.08043 4.83174L0.171478 0.99624C0.0616749 0.888366 0 0.742139 0 0.589677C0 0.437215 0.0616749 0.290988 0.171478 0.183114Z" fill="#393946" fill-opacity="0.5" />
@@ -191,87 +191,6 @@ export default function Dashboard() {
                             </button>
                         </div>
                     </div>
-
-                    <div className="sm:hidden flex   items-center justify-between gap-4 mb-6 mt-[50px]">
-                        {/* Quantity Dropdown */}
-                        {/* <div className="flex items-center gap-2">
-                            <label htmlFor="pageSize" className="text-gray-700 text-sm font-medium">Quantity:</label>
-                            <select
-                                id="pageSize"
-                                value={pageSize}
-                                onChange={e => { setPageSize(Number(e.target.value)); setPage(1); }}
-                                className="border border-gray-300 rounded-md px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-[#8256FF]"
-                            >
-                                {pageSizes.map(size => (
-                                    <option key={size} value={size}>{size}</option>
-                                ))}
-                            </select>
-                        </div> */}
-
-                        <div className="inline-flex items-center border border-gray-300 rounded-md px-3 py-1 bg-white cursor-pointer relative text-sm">
-
-                            {/* Left Label */}
-                            <span className="text-gray-700 font-medium mr-1">Quantity:</span>
-
-                            {/* Center Value */}
-                            <select
-                                id="pageSize"
-                                value={pageSize}
-                                onChange={e => { setPageSize(Number(e.target.value)); setPage(1); }}
-                                className="appearance-none bg-transparent pr-6 focus:outline-none cursor-pointer"
-                            >
-                                {pageSizes.map(size => (
-                                    <option key={size} value={size}>{size}</option>
-                                ))}
-                            </select>
-
-                            {/* Right Arrow */}
-                            <span className="absolute right-2 pointer-events-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
-                                    <path d="M5.49723 5.49723L9.87223 1.12223C9.99552 0.998948 10.0648 0.831739 10.0648 0.657389C10.0648 0.483038 9.99552 0.315829 9.87223 0.192545C9.74895 0.0692607 9.58174 4.2013e-07 9.40739 4.1121e-07C9.23304 4.0229e-07 9.06583 0.0692606 8.94254 0.192545L5.03293 4.10325L1.12223 0.193638C1.06119 0.132594 0.988718 0.0841712 0.90896 0.0511344C0.829202 0.0180975 0.743718 0.0010936 0.657388 0.0010936C0.571059 0.00109359 0.485575 0.0180975 0.405817 0.0511344C0.326059 0.0841712 0.253589 0.132594 0.192545 0.193638C0.131501 0.254683 0.0830776 0.327153 0.0500408 0.406911C0.0170039 0.486669 -2.56528e-08 0.572153 -2.87832e-08 0.658482C-3.19135e-08 0.744812 0.0170039 0.830296 0.0500407 0.910054C0.0830776 0.989812 0.1315 1.06228 0.192545 1.12333L4.56754 5.49833C4.62858 5.55943 4.70109 5.60789 4.78089 5.64092C4.8607 5.67395 4.94624 5.6909 5.03262 5.6908C5.11899 5.69069 5.20449 5.67354 5.28422 5.64033C5.36395 5.60711 5.43634 5.55848 5.49723 5.49723Z" fill="#181D20" />
-                                </svg>
-                            </span>
-
-                        </div>
-
-
-                        {/* Page Indicator and Controls */}
-                        <div className="flex items-center gap-2">
-                            <button
-                                onClick={() => goto(page - 1)}
-                                disabled={page === 1}
-                                className="sm:block hidden p-2 rounded border border-gray-300 bg-white disabled:opacity-50"
-                                aria-label="Previous page"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-                                    <path d="M0.183197 7.31754L6.4332 13.5675C6.49127 13.6256 6.5602 13.6717 6.63607 13.7031C6.71195 13.7345 6.79326 13.7507 6.87538 13.7507C6.95751 13.7507 7.03882 13.7345 7.1147 13.7031C7.19057 13.6717 7.2595 13.6256 7.31757 13.5675C7.37564 13.5095 7.4217 13.4405 7.45313 13.3647C7.48456 13.2888 7.50073 13.2075 7.50073 13.1253C7.50073 13.0432 7.48456 12.9619 7.45313 12.886C7.4217 12.8102 7.37564 12.7412 7.31757 12.6832L1.50898 6.87535L7.31757 1.06753C7.43485 0.95026 7.50073 0.7912 7.50073 0.625347C7.50073 0.459495 7.43485 0.300435 7.31757 0.18316C7.2003 0.0658846 7.04124 1.2357e-09 6.87538 0C6.70953 -1.2357e-09 6.55047 0.0658846 6.4332 0.18316L0.183197 6.43316C0.125087 6.49121 0.0789871 6.56014 0.0475345 6.63601C0.0160818 6.71188 -0.000106335 6.79321 -0.000106335 6.87535C-0.000106335 6.95748 0.0160818 7.03881 0.0475345 7.11469C0.0789871 7.19056 0.125087 7.25949 0.183197 7.31754Z" fill="#808080" />
-                                </svg>
-                            </button>
-                            <span className="text-gray-700 text-base font-medium min-w-[70px] text-center">
-                                {String(page).padStart(2, '0')} of {String(totalPages).padStart(2, '0')}
-                            </span>
-                            <button
-                                onClick={() => goto(page - 1)}
-                                disabled={page === 1}
-                                className="sm:hidden block p-2 rounded border border-gray-300 bg-white disabled:opacity-50"
-                                aria-label="Previous page"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-                                    <path d="M0.183197 7.31754L6.4332 13.5675C6.49127 13.6256 6.5602 13.6717 6.63607 13.7031C6.71195 13.7345 6.79326 13.7507 6.87538 13.7507C6.95751 13.7507 7.03882 13.7345 7.1147 13.7031C7.19057 13.6717 7.2595 13.6256 7.31757 13.5675C7.37564 13.5095 7.4217 13.4405 7.45313 13.3647C7.48456 13.2888 7.50073 13.2075 7.50073 13.1253C7.50073 13.0432 7.48456 12.9619 7.45313 12.886C7.4217 12.8102 7.37564 12.7412 7.31757 12.6832L1.50898 6.87535L7.31757 1.06753C7.43485 0.95026 7.50073 0.7912 7.50073 0.625347C7.50073 0.459495 7.43485 0.300435 7.31757 0.18316C7.2003 0.0658846 7.04124 1.2357e-09 6.87538 0C6.70953 -1.2357e-09 6.55047 0.0658846 6.4332 0.18316L0.183197 6.43316C0.125087 6.49121 0.0789871 6.56014 0.0475345 6.63601C0.0160818 6.71188 -0.000106335 6.79321 -0.000106335 6.87535C-0.000106335 6.95748 0.0160818 7.03881 0.0475345 7.11469C0.0789871 7.19056 0.125087 7.25949 0.183197 7.31754Z" fill="#808080" />
-                                </svg>
-                            </button>
-                            <button
-                                onClick={() => goto(page + 1)}
-                                disabled={page === totalPages}
-                                className="p-2 rounded border border-gray-300 bg-white disabled:opacity-50"
-                                aria-label="Next page"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-                                    <path d="M7.31754 7.31754L1.06754 13.5675C1.00947 13.6256 0.940528 13.6717 0.864658 13.7031C0.788787 13.7345 0.707469 13.7507 0.625347 13.7507C0.543226 13.7507 0.461908 13.7345 0.386037 13.7031C0.310167 13.6717 0.241229 13.6256 0.18316 13.5675C0.125091 13.5095 0.0790281 13.4405 0.0476015 13.3647C0.0161748 13.2888 0 13.2075 0 13.1253C0 13.0432 0.0161748 12.9619 0.0476015 12.886C0.0790281 12.8102 0.125091 12.7412 0.18316 12.6832L5.99175 6.87535L0.18316 1.06753C0.0658843 0.95026 -1.2357e-09 0.7912 0 0.625347C1.2357e-09 0.459495 0.0658843 0.300435 0.18316 0.18316C0.300435 0.0658846 0.459495 1.2357e-09 0.625347 0C0.7912 -1.2357e-09 0.95026 0.0658846 1.06754 0.18316L7.31754 6.43316C7.37565 6.49121 7.42175 6.56014 7.4532 6.63601C7.48465 6.71188 7.50084 6.79321 7.50084 6.87535C7.50084 6.95748 7.48465 7.03881 7.4532 7.11469C7.42175 7.19056 7.37565 7.25949 7.31754 7.31754Z" fill="black" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
                 </div>
 
                 {/* list area */}
@@ -281,43 +200,62 @@ export default function Dashboard() {
                     ))}
                 </div>
 
-                {/* Pagination */}
-                <div className="sm:flex hidden items-center justify-center mb-6">
-                    <div className="inline-flex items-center gap-3">
-                        <button onClick={() => goto(page - 1)} disabled={page === 1} className="mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-                            <path d="M0.183197 7.31754L6.4332 13.5675C6.49127 13.6256 6.5602 13.6717 6.63607 13.7031C6.71195 13.7345 6.79326 13.7507 6.87538 13.7507C6.95751 13.7507 7.03882 13.7345 7.1147 13.7031C7.19057 13.6717 7.2595 13.6256 7.31757 13.5675C7.37564 13.5095 7.4217 13.4405 7.45313 13.3647C7.48456 13.2888 7.50073 13.2075 7.50073 13.1253C7.50073 13.0432 7.48456 12.9619 7.45313 12.886C7.4217 12.8102 7.37564 12.7412 7.31757 12.6832L1.50898 6.87535L7.31757 1.06753C7.43485 0.95026 7.50073 0.7912 7.50073 0.625347C7.50073 0.459495 7.43485 0.300435 7.31757 0.18316C7.2003 0.0658846 7.04124 1.2357e-09 6.87538 0C6.70953 -1.2357e-09 6.55047 0.0658846 6.4332 0.18316L0.183197 6.43316C0.125087 6.49121 0.0789871 6.56014 0.0475345 6.63601C0.0160818 6.71188 -0.000106335 6.79321 -0.000106335 6.87535C-0.000106335 6.95748 0.0160818 7.03881 0.0475345 7.11469C0.0789871 7.19056 0.125087 7.25949 0.183197 7.31754Z" fill="#808080" />
-                        </svg></button>
+                {/* Responsive Pagination */}
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6 px-2">
+                    {/* Quantity Dropdown */}
+                    {/* <div className="flex items-center border border-gray-300 rounded-md px-2 py-1 w-fit h-8 bg-white">
+                        <label htmlFor="pageSize" className="text-gray-700 text-sm font-medium mr-1">Quantity:</label>
+                        <div className="relative flex items-center">
+                            <select
+                                id="pageSize"
+                                value={pageSize}
+                                onChange={e => { setPageSize(Number(e.target.value)); setPage(1); }}
+                                className="appearance-none bg-transparent pr-6 pl-1 text-sm focus:outline-none cursor-pointer"
+                                style={{ minWidth: '32px', height: '24px' }}
+                            >
+                                {pageSizes.map(size => (
+                                    <option key={size} value={size}>{size}</option>
+                                ))}
+                            </select>
+                            <span className="pointer-events-none absolute right-1 top-1/2 -translate-y-1/2 text-gray-500">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 6L8 10L12 6" stroke="#222" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div> */}
 
-                        {Array.from({ length: totalPages }).map((_, i) => {
-                            const num = i + 1;
-                            // show small window of pages + handle ellipsis
-                            const show = Math.abs(num - page) <= 2 || num === 1 || num === totalPages;
-                            if (!show) {
-                                // render ellipsis only once per gap
-                                const prev = i > 0 && Math.abs(i - (page - 1)) === 3;
-                                return prev ? <span key={num} className="px-3 text-gray-400">...</span> : null;
-                            }
-
-                            return (
-                                <button
-                                    key={num}
-                                    onClick={() => goto(num)}
-                                    className={`w-10 h-10 rounded-[5px] text-base leading-[100%] font-bold ${page === num ? ' border border-[#8256FF] text-[#8256FF]' : 'hover:bg-gray-100 border border-[#E9E9E9] text-[#808080] bg-[#f7f7f7]'}`}
-                                >
-                                    {String(num).padStart(2, '0')}
-                                </button>
-                            );
-                        })}
-
-                        <button onClick={() => goto(page + 1)} disabled={page === totalPages} className="ml-4"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-                            <path d="M7.31754 7.31754L1.06754 13.5675C1.00947 13.6256 0.940528 13.6717 0.864658 13.7031C0.788787 13.7345 0.707469 13.7507 0.625347 13.7507C0.543226 13.7507 0.461908 13.7345 0.386037 13.7031C0.310167 13.6717 0.241229 13.6256 0.18316 13.5675C0.125091 13.5095 0.0790281 13.4405 0.0476015 13.3647C0.0161748 13.2888 0 13.2075 0 13.1253C0 13.0432 0.0161748 12.9619 0.0476015 12.886C0.0790281 12.8102 0.125091 12.7412 0.18316 12.6832L5.99175 6.87535L0.18316 1.06753C0.0658843 0.95026 -1.2357e-09 0.7912 0 0.625347C1.2357e-09 0.459495 0.0658843 0.300435 0.18316 0.18316C0.300435 0.0658846 0.459495 1.2357e-09 0.625347 0C0.7912 -1.2357e-09 0.95026 0.0658846 1.06754 0.18316L7.31754 6.43316C7.37565 6.49121 7.42175 6.56014 7.4532 6.63601C7.48465 6.71188 7.50084 6.79321 7.50084 6.87535C7.50084 6.95748 7.48465 7.03881 7.4532 7.11469C7.42175 7.19056 7.37565 7.25949 7.31754 7.31754Z" fill="black" />
-                        </svg></button>
-                    </div>
+                    {/* Page Indicator and Controls */}
+                    {/* <div className="flex items-center gap-2">
+                        <button
+                            onClick={() => goto(page - 1)}
+                            disabled={page === 1}
+                            className="p-2 rounded border border-gray-300 bg-white disabled:opacity-50"
+                            aria-label="Previous page"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+                                <path d="M0.183197 7.31754L6.4332 13.5675C6.49127 13.6256 6.5602 13.6717 6.63607 13.7031C6.71195 13.7345 6.79326 13.7507 6.87538 13.7507C6.95751 13.7507 7.03882 13.7345 7.1147 13.7031C7.19057 13.6717 7.2595 13.6256 7.31757 13.5675C7.37564 13.5095 7.4217 13.4405 7.45313 13.3647C7.48456 13.2888 7.50073 13.2075 7.50073 13.1253C7.50073 13.0432 7.48456 12.9619 7.45313 12.886C7.4217 12.8102 7.37564 12.7412 7.31757 12.6832L1.50898 6.87535L7.31757 1.06753C7.43485 0.95026 7.50073 0.7912 7.50073 0.625347C7.50073 0.459495 7.43485 0.300435 7.31757 0.18316C7.2003 0.0658846 7.04124 1.2357e-09 6.87538 0C6.70953 -1.2357e-09 6.55047 0.0658846 6.4332 0.18316L0.183197 6.43316C0.125087 6.49121 0.0789871 6.56014 0.0475345 6.63601C0.0160818 6.71188 -0.000106335 6.79321 -0.000106335 6.87535C-0.000106335 6.95748 0.0160818 7.03881 0.0475345 7.11469C0.0789871 7.19056 0.125087 7.25949 0.183197 7.31754Z" fill="#808080" />
+                            </svg>
+                        </button>
+                        <span className="text-gray-700 text-base font-medium min-w-[70px] text-center">
+                            {String(page).padStart(2, '0')} of {String(totalPages).padStart(2, '0')}
+                        </span>
+                        <button
+                            onClick={() => goto(page + 1)}
+                            disabled={page === totalPages}
+                            className="p-2 rounded border border-gray-300 bg-white disabled:opacity-50"
+                            aria-label="Next page"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+                                <path d="M7.31754 7.31754L1.06754 13.5675C1.00947 13.6256 0.940528 13.6717 0.864658 13.7031C0.788787 13.7345 0.707469 13.7507 0.625347 13.7507C0.543226 13.7507 0.461908 13.7345 0.386037 13.7031C0.310167 13.6717 0.241229 13.6256 0.18316 13.5675C0.125091 13.5095 0.0790281 13.4405 0.0476015 13.3647C0.0161748 13.2888 0 13.2075 0 13.1253C0 13.0432 0.0161748 12.9619 0.0476015 12.886C0.0790281 12.8102 0.125091 12.7412 0.18316 12.6832L5.99175 6.87535L0.18316 1.06753C0.0658843 0.95026 -1.2357e-09 0.7912 0 0.625347C1.2357e-09 0.459495 0.0658843 0.300435 0.18316 0.18316C0.300435 0.0658846 0.459495 1.2357e-09 0.625347 0C0.7912 -1.2357e-09 0.95026 0.0658846 1.06754 0.18316L7.31754 6.43316C7.37565 6.49121 7.42175 6.56014 7.4532 6.63601C7.48465 6.71188 7.50084 6.79321 7.50084 6.87535C7.50084 6.95748 7.48465 7.03881 7.4532 7.11469C7.42175 7.19056 7.37565 7.25949 7.31754 7.31754Z" fill="black" />
+                            </svg>
+                        </button>
+                    </div> */}
                 </div>
 
                 {/* Edit new image area */}
-                <div className="rounded-none bg-[#f8fbff] sm:py-[60px] py-[40px] sm:mt-[100px] mt-[50px] px-4">
-                    <h2 class="sm:block hidden text-[32px] md:text-[42px] lg:text-[50px] font-bold text-[#181D20] text-center leading-tight mb-[50px]">Edit a <span class="text-[#D64011]">New Image</span></h2>
+                <div className="rounded-none bg-[#f8fbff] py-[60px] mt-[100px] px-4">
+                    <h2 class="text-[32px] md:text-[42px] lg:text-[50px] font-bold text-[#181D20] text-center leading-tight mb-[50px]">Edit a <span class="text-[#D64011]">New Image</span></h2>
                     <div className="max-w-[992px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <Link href="/de/background-remove-tool" className="flex items-center justify-between p-5 rounded-md  bg-[#FFF0EB] hover:shadow-md">
                             <div className=""><Image src={ToolIcone1} alt="toolicon1" /></div>

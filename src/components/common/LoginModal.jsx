@@ -6,7 +6,7 @@ import { apple, facebook, google, problem } from "../../utils/image";
 
 import { useRouter } from "next/navigation";
 
-const LoginModal = ({ isOpen, onClose }) => {
+const LoginModal = ({ isOpen, onClose, onForgotPassword }) => {
   const router = useRouter();
   if (!isOpen) return null;
 
@@ -56,8 +56,22 @@ const LoginModal = ({ isOpen, onClose }) => {
 
           {/* Forgot Password */}
           <div className="flex justify-end text-sm mb-4">
-            <span className="text-gray-500 hover:text-[var(--btnbg)] cursor-pointer flex items-center gap-1">
-              <Image src={problem}/>
+            <span
+              className="text-gray-500 cursor-pointer flex items-center gap-1"
+              onClick={() => onForgotPassword && onForgotPassword()}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <g clipPath="url(#clip0_1581_665)">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M8.00016 0.833252C11.9555 0.833252 15.1668 4.04459 15.1668 7.99992C15.1668 11.9553 11.9555 15.1666 8.00016 15.1666C4.04483 15.1666 0.833496 11.9553 0.833496 7.99992C0.833496 4.04459 4.04483 0.833252 8.00016 0.833252ZM8.00016 1.83325C4.59683 1.83325 1.8335 4.59659 1.8335 7.99992C1.8335 11.4033 4.59683 14.1666 8.00016 14.1666C11.4035 14.1666 14.1668 11.4033 14.1668 7.99992C14.1668 4.59659 11.4035 1.83325 8.00016 1.83325Z" fill="#676767" />
+                  <path d="M8.00016 11.7498C8.36835 11.7498 8.66683 11.4514 8.66683 11.0832C8.66683 10.715 8.36835 10.4165 8.00016 10.4165C7.63197 10.4165 7.3335 10.715 7.3335 11.0832C7.3335 11.4514 7.63197 11.7498 8.00016 11.7498Z" fill="#676767" />
+                  <path fillRule="evenodd" clipRule="evenodd" d="M7.16699 5.08333L7.50033 9.08333C7.50033 9.35933 7.72433 9.58333 8.00033 9.58333C8.27633 9.58333 8.50033 9.35933 8.50033 9.08333L8.83366 5.08333C8.83366 4.80733 8.66699 4.25 8.00033 4.25C7.33366 4.25 7.16699 4.80733 7.16699 5.08333Z" fill="#676767" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1581_665">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
               Forgot password?
             </span>
           </div>

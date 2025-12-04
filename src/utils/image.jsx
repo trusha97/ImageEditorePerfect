@@ -65,7 +65,7 @@ import used3 from "../Assets/images/used3.png"
 import Printer from "../Assets/images/Printer.png"
 import ToolIcone1 from "../Assets/images/ToolIcone1.png"
 import ToolIcone2 from "../Assets/images/ToolIcone2.png"
-
+import prograssbg from "../Assets/images/prograssbg.png"
 
 
 export {logo};
@@ -135,4 +135,6 @@ export {used3}
 export {Printer}
 export {ToolIcone1}
 export {ToolIcone2}
+export {prograssbg}
+
 

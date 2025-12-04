@@ -1,6 +1,9 @@
 "use client";
 import React, { useState } from "react";
+import ImageEditProcessingModal from "../../../components/common/ImageEditProcessingModal";
+import PasteImageURLModal from "../../../components/common/PasteImageURLModal";
 import Image from "next/image";
+import { useRouter, usePathname } from 'next/navigation';
 
 // Import all demo images
 import {
@@ -22,6 +25,12 @@ const UnblurBgSection = () => {
 
   const [selected, setSelected] = useState(demoImages[0]);
   const [image, setImage] = useState(null);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isPasteOpen, setIsPasteOpen] = useState(false);
+
+  const router = useRouter();
+  const pathname = usePathname();
+  const currentLang = (pathname && pathname.split("/").filter(Boolean)[0]) || ""; // e.g. 'de'
 
   // -------------------------------
   // IMAGE UPLOAD
@@ -172,7 +181,15 @@ const UnblurBgSection = () => {
                   />
 
                   {/* Upload Button */}
-                  <button className="bg-[#8256FF] font-bold md:text-2xl text-xl xs:text-[15px] text-white rounded-lg hover:bg-purple-600 transition-all w-full md:max-w-[410px] max-w-[276.76px] xs:max-w-[200px] md:h-[90px] h-[54px] flex items-center justify-center gap-2">
+                  <button
+                    className="bg-[#8256FF] font-bold md:text-2xl text-xl xs:text-[15px] text-white rounded-lg hover:bg-purple-600 transition-all w-full md:max-w-[410px] max-w-[276.76px] xs:max-w-[200px] md:h-[90px] h-[54px] flex items-center justify-center gap-2"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // navigate to the image processing page with noFooter flag
+                      const langSegment = currentLang ? `/${currentLang}` : "";
+                      router.push(`${langSegment}/Imageeditprocessing?=1`);
+                    }}
+                  >
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
                       <path d="M23.2498 12.4624C22.9695 12.4624 22.7007 12.5634 22.5025 12.7432C22.3043 12.923 22.193 13.1668 22.193 13.4211V17.4599C22.1922 18.1682 21.8816 18.8474 21.3294 19.3483C20.7772 19.8492 20.0285 20.1309 19.2477 20.1317H6.11563C5.33473 20.1309 4.58606 19.8492 4.03388 19.3483C3.4817 18.8474 3.17112 18.1682 3.17028 17.4599V13.4211C3.17028 13.1668 3.05893 12.923 2.86074 12.7432C2.66255 12.5634 2.39374 12.4624 2.11346 12.4624C1.83317 12.4624 1.56437 12.5634 1.36618 12.7432C1.16798 12.923 1.05664 13.1668 1.05664 13.4211V17.4599C1.05804 18.6766 1.59149 19.8431 2.53993 20.7035C3.48837 21.5638 4.77433 22.0477 6.11563 22.049H19.2477C20.5889 22.0477 21.8749 21.5638 22.8234 20.7035C23.7718 19.8431 24.3052 18.6766 24.3066 17.4599V13.4211C24.3066 13.1668 24.1953 12.923 23.9971 12.7432C23.7989 12.5634 23.5301 12.4624 23.2498 12.4624Z" fill="white" />
                       <path d="M7.08788 8.3469L11.6248 4.23139V16.297C11.6248 16.5513 11.7361 16.7951 11.9343 16.9749C12.1325 17.1547 12.4013 17.2557 12.6816 17.2557C12.9619 17.2557 13.2307 17.1547 13.4289 16.9749C13.6271 16.7951 13.7384 16.5513 13.7384 16.297V4.23139L18.2754 8.3469C18.4747 8.52153 18.7416 8.61815 19.0187 8.61597C19.2958 8.61379 19.5609 8.51296 19.7568 8.33522C19.9528 8.15748 20.0639 7.91704 20.0663 7.66568C20.0687 7.41432 19.9622 7.17216 19.7697 6.99136L13.4288 1.23942C13.2306 1.0597 12.9618 0.95874 12.6816 0.95874C12.4014 0.95874 12.1326 1.0597 11.9344 1.23942L5.59354 6.99136C5.40103 7.17216 5.29451 7.41432 5.29691 7.66568C5.29932 7.91704 5.41047 8.15748 5.60641 8.33522C5.80235 8.51296 6.06742 8.61379 6.34451 8.61597C6.6216 8.61815 6.88856 8.52153 7.08788 8.3469Z" fill="white" />
@@ -185,6 +202,10 @@ const UnblurBgSection = () => {
                   You can also copy and paste{" "}
                   <a
                     href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsPasteOpen(true);
+                    }}
                     className="text-[#8256FF] underline font-bold md:text-lg text-base"
                   >
                     URL
@@ -264,6 +285,7 @@ const UnblurBgSection = () => {
           </div>
         </div>
       </div>
+    <PasteImageURLModal isOpen={isPasteOpen} onClose={() => setIsPasteOpen(false)} />
     </div>
   );
 };

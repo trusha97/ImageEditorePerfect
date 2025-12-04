@@ -1,13 +1,17 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import ModalComponent from "./ModalComponent";
 import Image from "next/image";
 import { google, facebook } from "../../utils/image";
+import PaymentPopup from "./PaymentPopup";
 
-const AccountCreateModal = ({ isOpen, onClose }) => {
+const AccountCreateModal = ({ isOpen, onClose, onPaymentPopup }) => {
   if (!isOpen) return null;
+  
+  const [isPaymentOpen, setIsPaymentOpen] = useState(false);
 
   return (
+    <div>
     <ModalComponent isOpen={isOpen} onClose={onClose} width="520px">
       <div className="pt-8 pb-6">
         {/* Title */}
@@ -62,7 +66,8 @@ const AccountCreateModal = ({ isOpen, onClose }) => {
           </div>
 
           {/* Continue Button */}
-          <button className="w-full bg-[#7c3aed] text-white py-3 rounded-lg font-semibold text-[15px] hover:opacity-90 transition">
+          <button className="w-full bg-[#7c3aed] text-white py-3 rounded-lg font-semibold text-[15px] hover:opacity-90 transition"
+          onClick={() => setIsPaymentOpen(true)}>
             Continue
           </button>
 
@@ -75,6 +80,8 @@ const AccountCreateModal = ({ isOpen, onClose }) => {
         </div>
       </div>
     </ModalComponent>
+    <PaymentPopup isOpen={isPaymentOpen} onClose={() => setIsPaymentOpen(false)}/>
+      </div>
   );
 };
 
