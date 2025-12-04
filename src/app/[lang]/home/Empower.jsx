@@ -1,11 +1,14 @@
 "use client"
+import React, { useState } from 'react';
 import Image from "next/image";
 import Paragraph from "../../../Typography/text/Paragraph";
 import { Amazon, cocacola, empowerbg, Meta, Netflix, weare, womanwalking1 } from "../../../utils/image";
 import TestimonialCard from "./TestimonialCard ";
+import ToolSelectModal from "../../../components/common/ToolSelectModal";
 
 
 const Empower = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <div>
             <div
@@ -34,6 +37,7 @@ const Empower = () => {
                             <button
                                 type="button"
                                 className=" xl:mx-0 sm:mx-auto mx-0  mb-7.5 px-8.5 py-3.5  h-12 w-[200px] flex items-center justify-center rounded-[var(--radius)] bg-[var(--btnbg)] gap-[6px] cursor-pointer text-[var(--white)] font-bold text-base leading-5 "
+                                onClick={() => setIsModalOpen(true)}
                             >
                                 Let’s Get Start
                                 <svg
@@ -72,6 +76,7 @@ const Empower = () => {
                             <button
                                 type="button"
                                 className="px-8.5 py-3.5 h-12 w-[200px] flex items-center justify-center rounded-[var(--radius)] bg-[var(--btnbg)]  gap-[6px] cursor-pointer text-[var(--white)] font-bold text-base leading-5 "
+                                onClick={() => setIsModalOpen(true)}
                             >
                                 Let’s Get Start
                                 <svg
@@ -115,9 +120,16 @@ const Empower = () => {
                         </div>
                     </div>
                 </div>
+                {/* Tool Select Modal */}
+                <ToolSelectModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
             </div>
         </div>
     );
 };
 
 export default Empower;
+
+// Render modal
+function EmpowerModalHolder({ isOpen, onClose }) {
+    return <ToolSelectModal isOpen={isOpen} onClose={onClose} />;
+}

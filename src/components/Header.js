@@ -11,6 +11,12 @@ import LoginModal from './common/LoginModal';
 import LanguageModal from './common/languageModal';
 import { languages, isValidLanguage, getLanguageByCode } from '../config/languages';
 import { logo } from 'utils/image';
+import ImageEditProcessingModal from './common/ImageEditProcessingModal';
+import PasteImageURLModal from './common/PasteImageURLModal';
+import ToolSelectModal from './common/ToolSelectModal';
+import AccountCreateModal from './common/AccountCreateModal';
+import PaymentPopup from './common/PaymentPopup';
+import ResetPassword from './common/ResetPassword';
 
 export default function Header() {
   const { t, i18n } = useTranslation();
@@ -18,18 +24,21 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isResetOpen, setIsResetOpen] = useState(false);
+  const [isAccountCreateOpen, setIsAccountCreateOpen] = useState(false);
+  const [isPaymentOpen, setIsPaymentOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState(languages[0]);
 
   // ✅ Prevent background scroll
   useEffect(() => {
     const body = document.body;
-    if (isLoginOpen || isLangOpen || isMenuOpen) {
+    if (isLoginOpen || isResetOpen || isLangOpen || isMenuOpen || isAccountCreateOpen || isPaymentOpen) {
       body.style.overflow = 'hidden';
     } else {
       body.style.overflow = '';
     }
     return () => (body.style.overflow = '');
-  }, [isLoginOpen, isLangOpen, isMenuOpen]);
+  }, [isLoginOpen, isResetOpen, isLangOpen, isMenuOpen, isAccountCreateOpen, isPaymentOpen]);
 
 
   // get current pathname from Next so the header reacts to URL changes
@@ -106,7 +115,7 @@ export default function Header() {
   // initialize selected language from URL (pathname), cookie, or browser locale
   useEffect(() => {
     if (typeof window === 'undefined' || !i18n) return;
-    
+
     // 1) try to detect from current pathname (URL first priority)
     const langFromUrl = getFirstLocaleFromPath(pathname);
     if (langFromUrl && languages.some(l => l.code === langFromUrl)) {
@@ -119,7 +128,7 @@ export default function Header() {
       }
       return;
     }
-    
+
     // 2) fallback to cookie or browser
     const cookieLang = Cookies.get('lang');
     const browser = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
@@ -142,7 +151,7 @@ export default function Header() {
   };
 
   return (
-    <div className=" bg-white">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-white">
       {/* Navbar */}
       <nav className="mx-auto flex sm:items-end items-center justify-between sm:py-7 py-4 lg:px-12 px-4 sm:h-24 h-14">
         {/* Logo */}
@@ -159,7 +168,7 @@ export default function Header() {
             className="flex items-center gap-1.5 sm:p-2.5 p-1.5 sm:w-16 w-[47px] sm:h-10 h-[26px] bg-[var(--bgdpwhite)] rounded-[var(--radius)]"
           >
             <ReactCountryFlag
-                countryCode={selectedLang.flagCode || selectedLang.code}
+              countryCode={selectedLang.flagCode || selectedLang.code}
               svg
               style={{ width: "25px", height: "20px" }}
               className="sm:!w-[28px] !w-[1.375rem] sm:!h-[20px] !h-4"
@@ -234,7 +243,7 @@ export default function Header() {
             className="flex items-center gap-1.5 p-2.5 bg-[var(--bgdpwhite)] rounded-[var(--radius)]"
           >
             <ReactCountryFlag
-                countryCode={(selectedLang.flagCode || selectedLang.code || "GB").toUpperCase()}
+              countryCode={(selectedLang.flagCode || selectedLang.code || "GB").toUpperCase()}
               svg
               style={{ width: "28px", height: "20px" }}
             />
@@ -274,15 +283,36 @@ export default function Header() {
 
 
       {/* LoginModal */}
-      <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
-      {/* <PaymentPopup isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)}/> */}
-      {/* <AccountCreateModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)}/> */}
-      {/* <ResetPassword isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)}/> */}
-      {/* <ToolSelectModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} /> */}
-      {/* <PasteImageURLModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)}/> */}
-      {/* <ImageEditProcessingModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} /> */}
+      <LoginModal
+        isOpen={isLoginOpen}
+        onClose={() => setIsLoginOpen(false)}
+        onForgotPassword={() => {
+          setIsLoginOpen(false);
+          setIsResetOpen(true);
+        }}
+      />
+      {/* Reset Password Modal */}
+      <ResetPassword
+        isOpen={isResetOpen}
+        onClose={() => setIsResetOpen(false)}
+      />
 
-        
+
+      <AccountCreateModal
+  isOpen={isAccountCreateOpen}
+  onClose={() => setIsAccountCreateOpen(false)}
+  onForgotPassword={() => {
+    setIsAccountCreateOpen(false);
+    setIsPaymentOpen(true);
+  }}
+/>
+
+      <PaymentPopup
+        isOpen={isPaymentOpen}
+        onClose={() => setIsPaymentOpen(false)}
+      />
+
+
       {/* LanguageModal */}
       <LanguageModal
         isOpen={isLangOpen}

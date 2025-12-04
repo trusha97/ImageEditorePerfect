@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import AccountCreateModal from "../../../components/common/AccountCreateModal";
 import { plancardstar } from "utils/image";
 
 const Plan = () => {
+    const [isLoginOpen, setIsLoginOpen] = useState(false);
     return (
         // <div className="md:pb-[100px] pb-[50px] 2xl:px-[158px] md:mt-[6.25rem] px-5 xl:flex xl:gap-12 block md:ml-[49px] ml-0 md:mr-[51px] mr-0 rounded-3xl">
         <div className="">
@@ -22,7 +24,10 @@ const Plan = () => {
                     </p>
 
                     {/* SAME BUTTON DESIGN */}
-                    <button className=" text-base font-bold leading-[1.125rem] py-[0.875rem] border border-[var(--btnbg)] text-[var(--btnbg)] px-4 rounded-lg hover:bg-purple-50 transition">
+                    <button
+                        className=" text-base font-bold leading-[1.125rem] py-[0.875rem] border border-[var(--btnbg)] text-[var(--btnbg)] px-4 rounded-lg hover:bg-purple-50 transition"
+                        onClick={() => setIsLoginOpen(true)}
+                    >
                         Sign Up
                     </button>
                 </div>
@@ -63,6 +68,8 @@ const Plan = () => {
                     </button>
                 </div>
             </div>
+            {/* Account Create Modal */}
+            <AccountCreateModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
         </div>
     );
 };
