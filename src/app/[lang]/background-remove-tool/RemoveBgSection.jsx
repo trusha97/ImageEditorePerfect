@@ -54,7 +54,7 @@ const RemoveBgSection = () => {
         className="
           relative w-full
           lg:max-w-[564px] max-w-full md:h-[550px] h-[380.62px]
-          rounded-2xl overflow-hidden
+          rounded-2xl overflow-hidden  
         "
         onMouseMove={handleMouseMove}
       >
@@ -118,9 +118,9 @@ const RemoveBgSection = () => {
   // -------------------------------
   return (
     <div>
-      <div className="w-full   max-w-[1510px] mx-auto">
+      <div className="sm:mt-[96px] mt-14 w-full   max-w-[1510px] mx-auto ">
         <div
-          className="xl:flex block flex-col md:flex-row items-center justify-between
+          className=" xl:flex block items-center justify-between
           mx-[15px] xs:mx-[0]
           shadow-sm rounded-tl-[30px] rounded-tr-[30px] 2xl:px-[130px] px-[15px] xs:px-[20px] md:pt-[70px] pt-[30px] md:pb-[70px] pb-5
         "
@@ -130,7 +130,7 @@ const RemoveBgSection = () => {
           }}
         >
           {/* LEFT SIDE */}
-          <div className="w-full xl:max-w-[610px] max-w-full flex flex-col items-center md:items-start text-left">
+          <div className="md:-mt-[50px] -mt-0 w-full xl:max-w-[610px] max-w-full flex flex-col items-center md:items-start text-left">
             <h2 className="md:text-[60px] text-[40px]  xs:text-[32px] font-bold text-[#181D20]  md:leading-[70px] leading-[50px] xs:leading-[40px]  mb-[10px] md:mb-[15px]">
               Instantly Remove Background From Your Images
             </h2>

@@ -6,7 +6,7 @@ const UnblurBanner = () => {
     return (
         <>
             <div>
-                <div className='bg-cover bg-center ' style={{ backgroundImage: `url(${PricingBanner.src})` }}>
+                <div className='sm:mt-[96px] mt-14 bg-cover bg-center ' style={{ backgroundImage: `url(${PricingBanner.src})` }}>
                     <div className="text-center flex flex-col items-center justify-center md:pt-[100px] pt-[70px] md:pb-[205px] pb-[70px] px-[30px] ">
                         <h2 className="md:text-6xl text-3xl font-bold text-[#181D20]">
                             Pricing
