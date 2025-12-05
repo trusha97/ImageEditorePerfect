@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         <TranslationProvider>
           <HeaderController />
           {/* <UnsubscribeHeader/> */}
-          <main className="pt-24">{children}</main>
+          <main className="">{children}</main>
           <FooterController />
         </TranslationProvider>
       </body>
