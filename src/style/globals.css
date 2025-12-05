@@ -518,3 +518,25 @@ h6 {
     height: 50px;
   }
 }
+
+
+
+
+/* Custom Scrollbar */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 6px;               /* Thin bar */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #ffffff;      /* Pure white track */
+  border-radius: 10px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: #C9B7FF;      /* Light purple thumb */
+  border-radius: 10px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: #B49DFF;      /* Slightly darker on hover */
+}

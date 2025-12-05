@@ -15,7 +15,7 @@ const Empower = () => {
                 className="bg-cover bg-center rounded-[30px] lg:mx-12 mx-[15px]"
                 style={{ backgroundImage: `url(${empowerbg.src})` }}
             >
-                <div className="max-w-[1398px] mx-auto xl:flex block gap-5 sm:pt-20 pt-10 xl:pb-24 pb-10 px-4">
+                <div className="sm:mt-[96px] mt-14 max-w-[1398px] mx-auto xl:flex block gap-5 sm:pt-20 pt-10 xl:pb-24 pb-10 px-4">
                     <div className="xl:w-[60%] w-full">
                         <div className="lg:text-[70px] sm:text-6xl text-4xl font-normal leading-snug md:mb-[86px] mb-2.5  xl:text-left sm:text-center text-left">
                             <span className="text-white">
