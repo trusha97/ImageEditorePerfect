@@ -9,6 +9,7 @@
 
 
 
+import { Suspense } from "react";
 import TranslationProvider from "../provider/TranslationProvider";
 import "../style/globals.css";
 import HeaderController from "../components/HeaderController";
@@ -26,7 +27,9 @@ export default function RootLayout({ children }) {
           <HeaderController />
           {/* <UnsubscribeHeader/> */}
           <main className="">{children}</main>
-          <FooterController />
+          <Suspense fallback={null}>
+            <FooterController />
+          </Suspense>
         </TranslationProvider>
       </body>
     </html>
