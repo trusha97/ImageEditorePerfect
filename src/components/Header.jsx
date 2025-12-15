@@ -11,9 +11,6 @@ import LoginModal from './common/LoginModal';
 import LanguageModal from './common/languageModal';
 import { languages, isValidLanguage, getLanguageByCode } from '../config/languages';
 import { logo } from 'utils/image';
-import ImageEditProcessingModal from './common/ImageEditProcessingModal';
-import PasteImageURLModal from './common/PasteImageURLModal';
-import ToolSelectModal from './common/ToolSelectModal';
 import AccountCreateModal from './common/AccountCreateModal';
 import PaymentPopup from './common/PaymentPopup';
 import ResetPassword from './common/ResetPassword';
@@ -27,6 +24,7 @@ export default function Header() {
   const [isResetOpen, setIsResetOpen] = useState(false);
   const [isAccountCreateOpen, setIsAccountCreateOpen] = useState(false);
   const [isPaymentOpen, setIsPaymentOpen] = useState(false);
+  
   const [selectedLang, setSelectedLang] = useState(languages[0]);
 
   // ✅ Prevent background scroll
@@ -149,6 +147,10 @@ export default function Header() {
     changeLang(lang.code);
     setIsLangOpen(false);
   };
+
+  const handleContune = () => {
+    alert("Continue clicked");
+  }
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-white">
@@ -298,20 +300,16 @@ export default function Header() {
       />
 
 
-      <AccountCreateModal
+      {/* <AccountCreateModal
   isOpen={isAccountCreateOpen}
-  onClose={() => setIsAccountCreateOpen(false)}
-  onForgotPassword={() => {
-    setIsAccountCreateOpen(false);
-    setIsPaymentOpen(true);
-  }}
-/>
-
+  onClose={() => {alert("Continue clicked");}}
+    onContinue={handleContune}
+/> */}
+{/* 
       <PaymentPopup
         isOpen={isPaymentOpen}
         onClose={() => setIsPaymentOpen(false)}
-      />
-
+      /> */}
 
       {/* LanguageModal */}
       <LanguageModal
