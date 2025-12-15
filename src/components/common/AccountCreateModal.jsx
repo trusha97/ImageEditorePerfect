@@ -5,12 +5,9 @@ import Image from "next/image";
 import { google, facebook } from "../../utils/image";
 import PaymentPopup from "./PaymentPopup";
 
-const AccountCreateModal = ({ isOpen, onClose, onPaymentPopup }) => {
-  if (!isOpen) return null;
-  
-  const [isPaymentOpen, setIsPaymentOpen] = useState(false);
-
-  return (
+const AccountCreateModal = ({ isOpen, onClose,  onContinue }) => {
+ 
+ return (
     <div>
     <ModalComponent isOpen={isOpen} onClose={onClose} width="520px">
       <div className="pt-8 pb-6">
@@ -18,7 +15,7 @@ const AccountCreateModal = ({ isOpen, onClose, onPaymentPopup }) => {
         <h2 className="text-center text-[22px] font-semibold text-[#111]">
           Download Your Image in HD
         </h2>
-        <p className="text-center mt-2 mb-7 text-[14px] text-[#666]">
+        <p className="text-center mt-2 mb-7 text-[14px] text-[#b4abab]">
           Create your account and try the app for 7 days
         </p>
 
@@ -67,7 +64,8 @@ const AccountCreateModal = ({ isOpen, onClose, onPaymentPopup }) => {
 
           {/* Continue Button */}
           <button className="w-full bg-[#7c3aed] text-white py-3 rounded-lg font-semibold text-[15px] hover:opacity-90 transition"
-          onClick={() => setIsPaymentOpen(true)}>
+          onClick={onContinue}>
+
             Continue
           </button>
 
@@ -80,7 +78,7 @@ const AccountCreateModal = ({ isOpen, onClose, onPaymentPopup }) => {
         </div>
       </div>
     </ModalComponent>
-    <PaymentPopup isOpen={isPaymentOpen} onClose={() => setIsPaymentOpen(false)}/>
+
       </div>
   );
 };
